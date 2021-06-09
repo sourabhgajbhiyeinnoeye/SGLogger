@@ -80,7 +80,10 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/sourabhgajbhiyeinnoeye/SGLogger.git", :tag => "0.0.2" }
+  # spec.source       = { :git => "https://github.com/sourabhgajbhiyeinnoeye/SGLogger.git", :tag => "0.0.2" }
+
+  spec.ios.vendored_frameworks = 'SDK101.framework'
+  spec.source            = { :http => 'https://github.com/sourabhgajbhiyeinnoeye/SDK101/raw/master/SDK101.zip' , :type => 'zip' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
