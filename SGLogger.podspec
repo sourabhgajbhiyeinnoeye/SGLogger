@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "SGLogger"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "An awsome short description of SGLogger."
 
   # This description is used to generate tags and improve search results.
@@ -82,9 +82,13 @@ Pod::Spec.new do |spec|
 
   # spec.source       = { :git => "https://github.com/sourabhgajbhiyeinnoeye/SGLogger.git", :tag => "0.0.2" }
 
+  # spec.ios.vendored_frameworks = 'SDK101.framework'
+  # spec.source            = { :http => 'https://github.com/sourabhgajbhiyeinnoeye/SDK101/raw/master/SDK101.zip' , :type => 'zip' }
   spec.ios.vendored_frameworks = 'SDK101.framework'
   spec.source            = { :http => 'https://github.com/sourabhgajbhiyeinnoeye/SDK101/raw/master/SDK101.zip' , :type => 'zip' }
+  spec.exclude_files = "Classes/Exclude"
 
+  spec.ios.deployment_target = '12.1'
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -94,8 +98,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "SGLogger"#{}"Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  # spec.exclude_files = "Classes/Exclude"
 
   spec.swift_version = "5.0"
 
